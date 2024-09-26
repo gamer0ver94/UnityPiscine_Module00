@@ -22,7 +22,7 @@ public class Gameover : MonoBehaviour
             GetTerrainTexture();
             if (textureValues[1] == 1)
             {
-                Debug.Log("Gameover");
+                Debug.Log("Game Over");
                 canvas.SetActive(true);
                 Destroy(player);
             }

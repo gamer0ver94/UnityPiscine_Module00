@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.mass = 10;
         forceToJump = 50;
-        //Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     void Update()
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 cameraRelativeMovement = forwardRelative + rightRelative;
         rb.AddForce(cameraRelativeMovement * directionForce);
-        Debug.Log(cameraRelativeMovement);
+        
 
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
@@ -53,6 +53,6 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("upsy");
+        
     }
 }
